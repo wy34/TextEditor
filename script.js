@@ -47,10 +47,16 @@ function makeItalic(elem){
  * HINT: Use contains, remove, and add functions
  */
 function makeUnderline(elem){
-    //CODE GOES HERE
-    elem.classList.toggle("active")
-    let outputArea = document.querySelector("#text-output");
-    outputArea.classList.toggle("underline")
+  
+  //CODE GOES HERE
+    let formattedText = document.querySelector("#text-output");
+    if (elem.classList.contains("active")) {
+      elem.classList.remove("active")
+      formattedText.classList.remove("underline")
+    } else {
+      elem.classList.add("active")
+      formattedText.classList.add("underline")
+    }
 }
 
 /**
